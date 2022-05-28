@@ -1,6 +1,3 @@
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import MouseOverPopover from './Popover';
 import { DataGrid } from '@mui/x-data-grid';
 
@@ -28,7 +25,7 @@ const columns = [
 const MyDataGrid = () => {
 
   return (
-    <div style={{ height: 300, width: '100%' }}>
+    <div style={{ height: 300, width: '50%' }}>
       <DataGrid rows={rows} columns={columns} />
     </div>
   );
@@ -39,15 +36,7 @@ const style = { margin: 10 };
 const App = () => {
   return (
     <div style={style}>
-      <Grid container>
-        <Grid item xs={3} style={style}>
-          <Typography>column xs=4</Typography>
-        </Grid>
-        <Divider orientation="vertical" flexItem />
-        <Grid item xs={8} style={style}>
-          <MyDataGrid />
-        </Grid>
-      </Grid>
+      <MyDataGrid />
     </div>
   );
 }
